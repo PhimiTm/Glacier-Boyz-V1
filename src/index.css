@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-glacier-800 bg-gradient-to-br from-ice-50 to-glacier-100;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-ice-500 hover:bg-ice-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-glacier-50 text-ice-600 font-semibold py-3 px-6 rounded-lg border-2 border-ice-500 transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .card {
+    @apply bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6;
+  }
+  
+  .hero-gradient {
+    @apply bg-gradient-to-br from-ice-400 via-ice-500 to-ice-600;
+  }
+  
+  .ice-texture {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(255,255,255,0.3) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, rgba(255,255,255,0.2) 1px, transparent 1px);
+    background-size: 50px 50px, 30px 30px;
+  }
+}
